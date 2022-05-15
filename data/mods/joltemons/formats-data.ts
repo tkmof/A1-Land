@@ -84,38 +84,47 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	blazikenmega: {
+		randomBattleMoves: ["overheat", "closecombat", "uturn", "knockoff"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	blastoisemega: {
+		randomBattleMoves: ["shellsmash", "hydropump", "darkpulse", "aurasphere"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	darkrai: {
+		randomBattleMoves: ["hypnosis", "moonlitwaltz", "sludgebomb", "focusblast"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	deoxys: {
+		randomBattleMoves: ["zenheadbutt", "extremespeed", "knockoff", "superpower"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	deoxysspeed: {
+		randomBattleMoves: ["spikes", "taunt", "psychoboost", "stealthrock"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	deoxysattack: {
+		randomBattleMoves: ["psychoboost", "icebeam", "thunderbolt", "focusblast"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	dialga: {
+		randomBattleMoves: ["reconstruct", "stealthrock", "flashcannon", "fireblast"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	genesect: {
+		randomBattleMoves: ["shiftgear", "leechlife", "blazekick", "ironhead"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	genesectdouse: {
+		randomBattleMoves: ["technoblast", "fireblast", "icebeam", "uturn"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
@@ -132,170 +141,212 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	gengarmega: {
+		randomBattleMoves: ["nastyplot", "substitute", "shadowball", "focusblast"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	giratinaorigin: {
+		randomBattleMoves: ["poltergeist", "shadowsneak", "earthquake", "defog"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	giratina: {
+		randomBattleMoves: ["defog", "toxic", "roar", "shadowball"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	groudon: {
+		randomBattleMoves: ["swordsdance", "precipiceblades", "heatcrash", "stoneedge"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	groudonprimal: {
+		randomBattleMoves: ["stealthrock", "aridabsorption", "heatcrash", "precipiceblades"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	hooh: {
+		randomBattleMoves: ["sacredfire", "recover", "bravebird", "earthquake"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	kyogre: {
+		randomBattleMoves: ["originpulse", "thunder", "icebeam", "waterspout"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	kyogreprimal: {
+		randomBattleMoves: ["originpulse", "thunder", "icebeam", "calmmind"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	kyuremblack: {
+		randomBattleMoves: ["iciclespear", "dragondance", "fusionbolt", "roost"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	kyuremwhite: {
+		randomBattleMoves: ["icebeam", "earthpower", "fusionflare", "roost"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	landorus: {
+		randomBattleMoves: ["earthpower", "sludgewave", "focusblast", "calmmind"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	lucariomega: {
+		randomBattleMoves: ["swordsdance", "closecombat", "icepunch", "bulletpunch"],
 		tier: "UUBL",
 		doublesTier: "DOU",
 	},
 	lugia: {
+		randomBattleMoves: ["recover", "aeroblast", "whirlwind", "toxic"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	lunala: {
+		randomBattleMoves: ["roost", "willowisp", "moongeistbeam", "moonblast"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	marshadow: {
+		randomBattleMoves: ["spectralthief", "closecombat", "shadowsneak", "rocktomb"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	metagrossmega: {
+		randomBattleMoves: ["bulletpunch", "thunderpunch", "icepunch", "meteormash"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	mewtwo: {
+		randomBattleMoves: ["psystrike", "signalbeam", "focusblast", "lifedew"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	mewtwomegax: {
+		randomBattleMoves: ["bulkup", "drainpunch", "taunt", "earthquake"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	mewtwomegay: {
+		randomBattleMoves: ["psystrike", "icebeam", "thunderbolt", "nastyplot"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	naganadel: {
+		randomBattleMoves: ["uturn", "rapidspin", "sludgewave", "dracometeor"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	magearna: {
+		randomBattleMoves: ["fleurcannon", "icebeam", "voltswitch", "focusblast"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	necrozmadawnwings: {
+		randomBattleMoves: ["photongeyser", "moongeistbeam", "calmmind", "heatwave"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	necrozmaduskmane: {
+		randomBattleMoves: ["photongeyser", "sunsteelstrike", "dragondance", "earthquake"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	palkia: {
+		randomBattleMoves: ["hydropump", "spacialrend", "fireblast", "thunder"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	pheromosa: {
+		randomBattleMoves: ["lunge", "closecombat", "tripleaxel", "drillrun"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	rayquaza: {
+		randomBattleMoves: ["dragonascent", "swordsdance", "extremespeed", "vcreate"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	reshiram: {
+		randomBattleMoves: ["roost", "blueflare", "defog", "scorchingsands"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	salamencemega: {
+		randomBattleMoves: ["doubleedge", "roost", "dragondance", "earthquake"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	solgaleo: {
+		randomBattleMoves: ["sunsteelstrike", "earthquake", "knockoff", "flareblitz"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	xenreas: {
+		randomBattleMoves: ["geomancy", "moonblast", "thunder", "focusblast"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	yveltal: {
+		randomBattleMoves: ["suckerpunch", "oblivionwing", "darkpulse", "uturn"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	zamazenta: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	zekrom: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	zygarde: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	zygardecomplete: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	spectrier: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	dracovish: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	urshifu: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	calyrexshadow: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	calyrexice: {
-		tier: "Uber",
-		doublesTier: "DOU",
-	},
-	eternatus: {
+		randomBattleMoves: ["howl", "closecombat", "crunch", "wildcharge"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	zamazentacrowned: {
+		randomBattleMoves: ["reconstruct", "irondefense", "behemothbash", "howl"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
-	marshadow: {
+	zekrom: {
+		randomBattleMoves: ["roost", "dragondance", "boltstrike", "dragonclaw"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	zygarde: {
+		randomBattleMoves: ["dragondance", "glare", "stoneedge", "thousandarrows"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	zygardecomplete: {
+		randomBattleMoves: ["coil", "thousandarrows", "scaleshot", "rest"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	spectrier: {
+		randomBattleMoves: ["nastyplot", "shadowball", "darkpulse", "willowisp"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	dracovish: {
+		randomBattleMoves: ["fishiousrend", "crunch", "psychicfangs", "outrage"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	urshifu: {
+		randomBattleMoves: ["closecombat", "wickedblow", "uturn", "suckerpunch"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	calyrexshadow: {
+		randomBattleMoves: ["astralbarrage", "drainingkiss", "pollenpuff", "leafstorm"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	calyrexice: {
+		randomBattleMoves: ["trickroom", "glaciallance", "swordsdance", "closecombat"],
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	eternatus: {
+		randomBattleMoves: ["dynamaxcannon", "recover", "flamethrower", "sludgewave"],
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
