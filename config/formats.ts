@@ -93,9 +93,7 @@ export const Formats: FormatList = [
 			const god = target.side.team.find(set => {
 				let godSpecies = this.dex.getSpecies(set.species);
 				const isNatDex = this.format.ruleTable?.has('standardnatdex');
-				const validator = this.dex.formats.getRuleTable(
-					this.dex.formats(`gen${isNatDex && this.gen < 8 ? 8 : this.gen}${isNatDex ? 'nationaldex' : 'ou'}`)
-				);
+				const format = this.dex.formats.getRuleTable(this.dex.formats('gen8nationaldex'));
 				if (this.toID(set.ability) === 'powerconstruct') {
 					return true;
 				}
