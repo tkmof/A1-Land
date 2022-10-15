@@ -66,12 +66,12 @@ export const Formats: FormatList = [
 		onValidateTeam(team) {
 			const gods = new Set<string>();
 			for (const set of team) {
-				let species = this.dex.species(set.species);
-				if (typeof species.battleOnly === 'string') species = this.dex.species(species.battleOnly);
-				if (set.item && this.dex.items(set.item).megaStone) {
-					const item = this.dex.items(set.item);
+				let species = this.dex.getSpecies(set.species);
+				if (typeof species.battleOnly === 'string') species = this.dex.getSpecies(species.battleOnly);
+				if (set.item && this.dex.getItem(set.item).megaStone) {
+					const item = this.dex.getItem(set.item);
 					if (item.megaEvolves === species.baseSpecies) {
-						species = this.dex.species(item.megaStone);
+						species = this.dex.getSpecies(item.megaStone);
 					}
 				}
 				if (this.ruleTable.has('standardnatdex')) {
@@ -91,7 +91,7 @@ export const Formats: FormatList = [
 		onModifySpecies(species, target, source) {
 			if (source || !target?.side) return;
 			const god = target.side.team.find(set => {
-				let godSpecies = this.dex.species(set.species);
+				let godSpecies = this.dex.getSpecies(set.species);
 				const isNatDex = this.format.ruleTable?.has('standardnatdex');
 				const validator = this.dex.formats.getRuleTable(
 					this.dex.formats(`gen${isNatDex && this.gen < 8 ? 8 : this.gen}${isNatDex ? 'nationaldex' : 'ou'}`)
@@ -100,17 +100,17 @@ export const Formats: FormatList = [
 					return true;
 				}
 				if (set.item) {
-					const item = this.dex.items(set.item);
-					if (item.megaEvolves === set.species) godSpecies = this.dex.species(item.megaStone);
+					const item = this.dex.getItem(set.item);
+					if (item.megaEvolves === set.species) godSpecies = this.dex.getSpecies(item.megaStone);
 				}
 				const isBanned = validator.isBannedSpecies(godSpecies);
 				return isBanned;
 			}) || target.side.team[0];
 			const stat = Dex.stats.ids()[target.side.team.indexOf(target.set)];
 			const newSpecies = this.dex.deepClone(species);
-			let godSpecies = this.dex.species(god.species);
+			let godSpecies = this.dex.getSpecies(god.species);
 			if (typeof godSpecies.battleOnly === 'string') {
-				godSpecies = this.dex.species(godSpecies.battleOnly);
+				godSpecies = this.dex.getSpecies(godSpecies.battleOnly);
 			}
 			newSpecies.bst -= newSpecies.baseStats[stat];
 			newSpecies.baseStats[stat] = godSpecies.baseStats[stat];
