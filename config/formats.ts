@@ -66,16 +66,16 @@ export const Formats: FormatList = [
 		onValidateTeam(team) {
 			const gods = new Set<string>();
 			for (const set of team) {
-				let species = this.dex.species.get(set.species);
-				if (typeof species.battleOnly === 'string') species = this.dex.species.get(species.battleOnly);
-				if (set.item && this.dex.items.get(set.item).megaStone) {
-					const item = this.dex.items.get(set.item);
+				let species = this.dex.species(set.species);
+				if (typeof species.battleOnly === 'string') species = this.dex.species(species.battleOnly);
+				if (set.item && this.dex.items(set.item).megaStone) {
+					const item = this.dex.items(set.item);
 					if (item.megaEvolves === species.baseSpecies) {
-						species = this.dex.species.get(item.megaStone);
+						species = this.dex.species(item.megaStone);
 					}
 				}
 				if (this.ruleTable.has('standardnatdex')) {
-					const format = this.dex.formats.getRuleTable(this.dex.formats.get('gen8nationaldex'));
+					const format = this.dex.formats.getRuleTable(this.dex.formats('gen8nationaldex'));
 					if (format.isBannedSpecies(species)) gods.add(species.name);
 				} else {
 					if (['ag', 'uber'].includes(this.toID(species.tier)) || this.toID(set.ability) === 'powerconstruct') {
@@ -91,26 +91,26 @@ export const Formats: FormatList = [
 		onModifySpecies(species, target, source) {
 			if (source || !target?.side) return;
 			const god = target.side.team.find(set => {
-				let godSpecies = this.dex.species.get(set.species);
+				let godSpecies = this.dex.species(set.species);
 				const isNatDex = this.format.ruleTable?.has('standardnatdex');
 				const validator = this.dex.formats.getRuleTable(
-					this.dex.formats.get(`gen${isNatDex && this.gen < 8 ? 8 : this.gen}${isNatDex ? 'nationaldex' : 'ou'}`)
+					this.dex.formats(`gen${isNatDex && this.gen < 8 ? 8 : this.gen}${isNatDex ? 'nationaldex' : 'ou'}`)
 				);
 				if (this.toID(set.ability) === 'powerconstruct') {
 					return true;
 				}
 				if (set.item) {
-					const item = this.dex.items.get(set.item);
-					if (item.megaEvolves === set.species) godSpecies = this.dex.species.get(item.megaStone);
+					const item = this.dex.items(set.item);
+					if (item.megaEvolves === set.species) godSpecies = this.dex.species(item.megaStone);
 				}
 				const isBanned = validator.isBannedSpecies(godSpecies);
 				return isBanned;
 			}) || target.side.team[0];
 			const stat = Dex.stats.ids()[target.side.team.indexOf(target.set)];
 			const newSpecies = this.dex.deepClone(species);
-			let godSpecies = this.dex.species.get(god.species);
+			let godSpecies = this.dex.species(god.species);
 			if (typeof godSpecies.battleOnly === 'string') {
-				godSpecies = this.dex.species.get(godSpecies.battleOnly);
+				godSpecies = this.dex.species(godSpecies.battleOnly);
 			}
 			newSpecies.bst -= newSpecies.baseStats[stat];
 			newSpecies.baseStats[stat] = godSpecies.baseStats[stat];
