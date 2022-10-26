@@ -2499,6 +2499,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	
 // CCAPM Test
 	shieldsdown: {
+		onSwitchIn(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Minior' || pokemon.transformed) return;
+			if (!pokemon.item) {
+				if (pokemon.species.forme === 'Meteor') {
+					pokemon.formeChange('Minior-Meteor');
+				}
+			} else {
+				if (pokemon.species.forme === 'Meteor') {
+					pokemon.formeChange(pokemon.set.species);
+				}
+			}
+		},
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Minior' || pokemon.transformed) return;
 			if (!pokemon.item) {
