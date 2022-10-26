@@ -2495,4 +2495,69 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		name: "Metronome",
 	},
+	
+	
+// CCAPM Test
+	shieldsdown: {
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Minior' || pokemon.transformed) return;
+			if (!pokemon.item) {
+				if (pokemon.species.forme === 'Meteor') {
+					pokemon.formeChange('Minior-Meteor');
+				}
+			} else {
+				if (pokemon.species.forme === 'Meteor') {
+					pokemon.formeChange(pokemon.set.species);
+				}
+			}
+		},
+		onResidualOrder: 27,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Minior' || pokemon.transformed || !pokemon.hp) return;
+			if (!pokemon.item) {
+				if (pokemon.species.forme !== 'Meteor') {
+					pokemon.formeChange('Minior-Meteor');
+				}
+			} else {
+				if (pokemon.species.forme === 'Meteor') {
+					pokemon.formeChange(pokemon.set.species);
+				}
+			}
+		},
+		onAfterUseItem(item, pokemon) {
+			if (pokemon !== this.effectData.target) return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Minior' || pokemon.transformed || !pokemon.hp) return;
+			if (!pokemon.item) {
+				if (pokemon.species.forme !== 'Meteor') {
+					pokemon.formeChange('Minior-Meteor');
+				}
+			}
+		},
+		onTakeItem(item, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Minior' || pokemon.transformed || !pokemon.hp) return;
+			if (!pokemon.item) {
+				if (pokemon.species.forme !== 'Meteor') {
+					pokemon.formeChange('Minior-Meteor');
+				}
+			}
+		},
+		isPermanent: true,
+		isUnbreakable: true,
+		name: "Shields Down",
+		rating: 3,
+		num: 197,
+	},
+/*
+	eideticmemory: {
+		onAnyTryMove(target, source, effect) {
+			if (['stealthrock', 'spikes', 'toxicspikes', 'defog', 'rapidspin', 'spikyweb'].includes(effect.id)) {
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectData.target, 'ability: Eidetic Memory', effect, '[of] ' + target);
+				return false;
+			}
+		},
+		name: "Eidetic Memory",
+		rating: -1,
+	},
+*/
 };
