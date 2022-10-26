@@ -2563,7 +2563,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	eideticmemory: {
 		shortDesc: "While this Pokemon is active, entry hazards cannot be removed or set.",
 		onAnyTryMove(target, source, effect) {
-			if (['stealthrock', 'spikes', 'toxicspikes', /* 'defog', 'rapidspin', */ 'stickyweb'].includes(effect.id)) {
+			if (['stealthrock', 'spikes', 'toxicspikes', 'defog', 'rapidspin', 'stickyweb'].includes(effect.id)) {
 				this.attrLastMove('[still]');
 				this.add('cant', this.effectData.target, 'ability: Eidetic Memory', effect, '[of] ' + target);
 				return false;
