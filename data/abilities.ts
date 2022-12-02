@@ -16,4 +16,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Choice Words",
 		num: 1,
 	},
+	tall: {
+		onSourceBasePowerPriority: 18,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Athletic') {
+				return this.chainModify(0.75);
+			}
+		},
+		name: "Tall",
+		num: 85,
+	},
 };
