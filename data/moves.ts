@@ -17,6 +17,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.basePower = 100;
 			}
 		},
+		onModifyType(move, pokemon) {
+			let type = pokemon.types[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
 		category: "Physical",
 		name: "Standard Punch",
 		pp: 15,
@@ -44,6 +49,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			} else {
 				move.basePower = 100;
 			}
+		},
+		onModifyType(move, pokemon) {
+			let type = pokemon.types[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
 		},
 		category: "Special",
 		name: "Standard Punch",
