@@ -24,6 +24,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Tall",
-		num: 85,
+		num: 2,
 	},
 };
