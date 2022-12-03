@@ -47,16 +47,6 @@ function replace(file, replacements) {
 		}
 	});
 }
-function copyOverDataJSON(file) {
-	var source = './data/' + file;
-	var dest = './.data-dist/' + file;
-	fs.readFile(source, function (err, text) {
-		if (err) throw err;
-		fs.writeFile(dest, text, function (err) {
-			if (err) throw err;
-		});
-	});
-}
 
 // Check to make sure the most recently added or updated dependency is installed at the correct version
 try {
