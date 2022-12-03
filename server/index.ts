@@ -70,8 +70,6 @@ try {
 	throw new Error("Dependencies are unmet; run `node build` before launching Pokemon Showdown again.");
 }
 
-import {FS} from '../lib/fs';
-
 /*********************************************************
  * Load configuration
  *********************************************************/
